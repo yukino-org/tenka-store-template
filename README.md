@@ -6,6 +6,8 @@ Base template for creating your own extensions for Yukino.
 
 - Flutter ([https://flutter.dev/](https://flutter.dev/))
 
+- Git ([https://git-scm.com/](https://git-scm.com/))
+
 ## Good Practices
 
 - Always use snake case. (For example, if the site name if `animesite.com`, always use `animesite_com` in filenames)
