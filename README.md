@@ -16,7 +16,7 @@ Base template for creating your own extensions for Yukino.
 
 - Always test before using it in the app.
 
-- Always visit [https://github.com/yukino-app/official-extensions](https://github.com/yukino-app/official-extensions) for references.
+- Always visit [yukino-app/official-extensions](https://github.com/yukino-app/official-extensions) for references.
 
 - All the predefined functions can be referred [here](https://github.com/yukino-app/yukino/blob/065c0c74865271afc23ded79b6b58d17a86332a5/packages/extensions/lib/hetu/externals.dart#L1). You can always open a pull request containing additional functions if needed.
 
