@@ -42,7 +42,7 @@ flutter pub get
 2. Run the test file using
 
 ```bash
-flutter test ./test/<anime/manga>/<test_filename>.dart
+flutter test ./test/<anime/manga>/<test_filename>.dart -r expanded
 ```
 
 Note: You can also run only a specific method by appending `--dart-define="method=<method>"`
