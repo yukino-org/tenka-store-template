@@ -45,4 +45,4 @@ flutter pub get
 flutter test ./test/<anime/manga>/<test_filename>.dart
 ```
 
-You can also run only a specific method by appending `--dart-define="method=<method>"`
+Note: You can also run only a specific method by appending `--dart-define="method=<method>"`
