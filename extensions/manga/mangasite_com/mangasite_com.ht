@@ -1,0 +1,26 @@
+const baseURL = 'https://mangasite.com';
+
+const defaultHeaders: Map<str> = {
+    'User-Agent': httpUserAgent(),
+    'Referer': baseURL,
+}
+
+fun defaultLocale() -> str {
+    return "en";
+}
+
+fun search(terms: str, locale: str) {
+    // TODO: Implement `search`
+}
+
+fun getInfo(url: str, locale: str) {
+    // TODO: Implement `getInfo`
+}
+
+fun getChapter(chapter: Map) {
+    // TODO: Implement `getChapter`
+}
+
+fun getPage(page: Map) {
+    // TODO: Implement `getPage`
+}
