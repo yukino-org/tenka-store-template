@@ -1,0 +1,8 @@
+baseURL := 'https://mangasite.com';
+
+defaultHeaders := {
+    ['User-Agent']: Http.defaultDesktopUserAgent(),
+    Referer: baseURL,
+};
+
+defaultLocale := 'en';

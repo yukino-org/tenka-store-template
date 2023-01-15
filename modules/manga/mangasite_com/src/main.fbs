@@ -1,0 +1,47 @@
+import "./utils.fbs" as $;
+
+extractor := {
+    defaultLocale: $.defaultLocale,
+    search: -> terms, locale {
+        return [{
+            title: 'Demo',
+            url: $.baseURL,
+            thumbnail: {
+                url: $.baseURL,
+                headers: {},
+            },
+            locale: $.defaultLocale,
+        }];
+    },
+    getInfo: -> url, locale {
+        return {
+            title: "Demo",
+            url: $.baseURL,
+            thumbnail: {
+                url: $.baseURL,
+                headers: {},
+            },
+            chapters: [{
+                title: "Demo",
+                url: $.baseURL,
+                chapter: '0',
+                volume: '0',
+                locale: $.defaultLocale,
+            }],
+            locale: $.defaultLocale,
+            availableLocales: [$.defaultLocale],
+        };
+    },
+    getChapter: -> url, locale {
+        return [{
+            url: $.baseURL,
+            locale: $.defaultLocale,
+        }];
+    },
+    getPage: -> url, locale {
+        return {
+            url: $.baseURL,
+            headers: $.defaultHeaders,
+        };
+    }
+};
