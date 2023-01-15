@@ -28,7 +28,7 @@ abstract class Utils {
       path.join(Directory.current.path, 'dist/summary/README.md');
 
   static const String ghUserName = 'yukino-org';
-  static const String ghRepoName = 'tenka-modules';
+  static const String ghRepoName = 'tenka-modules-template';
   static const String ghMainBranch = 'main';
 
   static TenkaLocalFileDS getAnimeDS(final String dir) => TenkaLocalFileDS(
