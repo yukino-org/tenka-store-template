@@ -1,41 +1,41 @@
-import "./utils.fbs" as $;
+import "./config.fbs" as config;
 
 extractor := {
-    defaultLocale: $.defaultLocale,
+    defaultLocale: config.defaultLocale,
     search: -> terms, locale {
         return [{
             title: 'Demo',
-            url: $.baseURL,
+            url: config.baseURL,
             thumbnail: {
-                url: $.baseURL,
+                url: config.baseURL,
                 headers: {},
             },
-            locale: $.defaultLocale,
+            locale: config.defaultLocale,
         }];
     },
     getInfo: -> url, locale {
         return {
             title: "Demo",
-            url: $.baseURL,
+            url: config.baseURL,
             thumbnail: {
-                url: $.baseURL,
+                url: config.baseURL,
                 headers: {},
             },
             episodes: [{
                 episode: '0',
-                url: $.baseURL,
-                locale: $.defaultLocale,
+                url: config.baseURL,
+                locale: config.defaultLocale,
             }],
-            locale: $.defaultLocale,
-            availableLocales: [$.defaultLocale],
+            locale: config.defaultLocale,
+            availableLocales: [config.defaultLocale],
         };
     },
     getSources: -> url, locale {
         return [{
-            url: $.baseURL,
+            url: config.baseURL,
             headers: {},
             quality: 'unknown',
-            locale: $.defaultLocale,
+            locale: config.defaultLocale,
         }];
     },
 };
