@@ -8,7 +8,7 @@ final TenkaLocalFileDS source = Utils.getAnimeDS('animesite_com');
 final MockedAnimeExtractor mocked = MockedAnimeExtractor(
   search: (final AnimeExtractor ext) => ext.search('demo', locale),
   getInfo: (final AnimeExtractor ext) => ext.getInfo('demo', locale),
-  getSources: (final AnimeExtractor ext) => ext.getSources('demo', locale),
+  getSource: (final AnimeExtractor ext) => ext.getSource('demo', locale),
 );
 
 Future<void> main() async {
