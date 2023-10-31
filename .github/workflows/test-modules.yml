@@ -1,0 +1,30 @@
+name: Test Modules
+
+on:
+    workflow_dispatch:
+    # enable this if you need it
+    # schedule:
+    #     - cron: "0 0 * * *"
+
+jobs:
+    test-modules:
+        runs-on: ubuntu-latest
+
+        steps:
+            - uses: actions/checkout@v2
+            - uses: dart-lang/setup-dart@v1
+
+            - name: 🚧 Do prerequisites
+              run: dart pub get
+
+            - name: 🧪 Test modules
+              run: dart run ./store/test.dart --ci
+
+            - name: 🚀 Upload summary
+              uses: zyrouge/github-push-action@v1
+              with:
+                  directory: dist-summary
+                  branch: summary
+                  skip-fetch: true
+                  checkout-orphan: true
+                  force: true

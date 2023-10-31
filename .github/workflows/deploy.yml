@@ -1,0 +1,27 @@
+name: Deploy
+
+on:
+    workflow_dispatch:
+
+jobs:
+    deploy-store:
+        runs-on: ubuntu-latest
+
+        steps:
+            - uses: actions/checkout@v4
+            - uses: dart-lang/setup-dart@v1
+
+            - name: 🚧 Do prerequisites
+              run: dart pub get
+
+            - name: 🔨 Build store
+              run: dart run ./store/build.dart
+
+            - name: 🚀 Deploy
+              uses: zyrouge/github-push-action@v1
+              with:
+                  directory: dist
+                  branch: dist
+                  skip-fetch: true
+                  checkout-orphan: true
+                  force: true
